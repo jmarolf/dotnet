@@ -4,12 +4,15 @@
 
 #if !NET6_0_OR_GREATER
 
+using System.Diagnostics;
+
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
 /// Used to indicate to the compiler that the <c>.locals init</c> flag should not be set in method headers.
 /// </summary>
 /// <remarks>Internal copy from the BCL attribute.</remarks>
+[Conditional("DEBUG")]
 [AttributeUsage(
     AttributeTargets.Module |
     AttributeTargets.Class |

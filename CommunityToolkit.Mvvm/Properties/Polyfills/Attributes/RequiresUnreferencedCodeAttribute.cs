@@ -9,8 +9,8 @@ namespace System.Diagnostics.CodeAnalysis;
 /// <summary>
 /// Indicates that the specified method requires dynamic access to code that is not referenced statically.
 /// </summary>
-[AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor | AttributeTargets.Class, Inherited = false)]
 [Conditional("DEBUG")]
+[AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor | AttributeTargets.Class, Inherited = false)]
 internal sealed class RequiresUnreferencedCodeAttribute : Attribute
 {
     /// <summary>
